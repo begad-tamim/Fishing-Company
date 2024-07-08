@@ -4,49 +4,117 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: white;
 }
 
 header {
-    background-color: #008080;
-    color: white;
-    padding: 10px 0;
+    background-color: #F9F9F9;
+    color: 414141;
+    padding: 25px 0;
     text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    color:#333333;
+    gap:50px;
 }
 
 nav ul li {
     display: inline;
     margin: 0 15px;
+    text-decoration: none; 
+
+
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: #333333; 
+
+}
+nav ul li a {
+    color: #333333; 
+    text-decoration: none; 
+}
+
+nav ul li a:visited {
+    color: #333333; 
+}
+
+nav ul li a:hover {
+    color: darkred; 
+}
+
+h1{
+    font-size:3rem;
 }
 
 section {
     padding: 20px;
-    margin: 20px auto; /* Center align section */
-    max-width: 800px; /* Limit section width */
+    margin: 20px auto; 
+    width:70%;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center; /* Center align content */
     position: relative; /* Ensure relative positioning */
 }
-
-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto; /* Center align image */
+#main-2 p {
+    font-size: 1.2rem; /* Font size */
+    line-height: 1.6; /* Line height for readability */
+    color: #555; /* Text color */
+    margin: 20px 0; /* Margin for spacing */
+    text-align: left; /* Text alignment */
+    border-radius: 5px; /* Rounded corners */
+    max-width: 70%; /* Ensure text doesn’t overflow */
+    overflow: hidden; /* Hide overflowed content */
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #main-2 p {
+        font-size: 1rem; /* Smaller font size */
+        padding: 10px; /* Adjust padding */
+    }
+}
+section img{
+    width:50rem;
+    padding-right: 70px;
+}
+
+@media (max-width: 480px) {
+    #main-2 p {
+        font-size: 0.9rem; /* Even smaller font size */
+        padding: 8px; /* Adjust padding */
+    }
+}
+
+#home-main {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 20px; 
+    padding: 20px;
+}
+#main-2 {
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: flex-start; /* Align items to the start of the container */
+    gap: 10px; /* Space between elements */
+}
+
+#main-2 h1, #main-2 p {
+    margin: 0; /* Remove default margin */
+}
+
+#Homepage-logo {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 20px;
+}
+
 
 .product {
     margin-bottom: 20px;
@@ -142,6 +210,29 @@ form button.dynamic-btn:hover::before {
     width: 200%;
     height: 200%;
     opacity: 0.5;
+}
+.dynamic-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #0072ff, #00c6ff);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.dynamic-btn:hover {
+    background: linear-gradient(45deg, #0056b3, #0092d6);
+    transform: scale(1.05);
+}
+
+.dynamic-btn:active {
+    background: linear-gradient(45deg, #003d7a, #007bbf);
+    transform: scale(0.98);
 }
 
 .hidden {
